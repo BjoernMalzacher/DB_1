@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  postgres:
+    image: postgres:alpine3.17
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:6.21
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@janik.io
+      PGADMIN_DEFAULT_USER: admin
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - ./data/pgadmin:/var/lib/pgadmin
