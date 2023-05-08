@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": " iwi-i-db-01",
+            "port": 1521,
+            "driver": "MySQL",
+            "name": "Malzacher",
+            "database": "db1",
+            "username": "g20"
+        }
+    ]
+}
